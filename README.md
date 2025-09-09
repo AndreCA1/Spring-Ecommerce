@@ -24,36 +24,36 @@ API de e-commerce desenvolvida em **Java 17**, utilizando **Spring Boot**, **Gra
    classDiagram
   direction TD
   class USER {
-      int id_user PK
+      Long id_user PK
       string username
       string email
       string password
   }
 
   class PRODUCT {
-      int id_product PK
+      Long id_product PK
       string name
       string description
       float price
-      int id_user FK
+      Long id_user FK
   }
 
   class CARTITEM {
-      int id_user FK
-      int id_product FK
+      Long id_user FK
+      Long id_product FK
       int quantity
       PK(id_user, id_product)
   }
 
   class ORDER {
-      int id_order PK
-      int id_user FK
+      Long id_order PK
+      Long id_user FK
       date date
   }
 
   class ORDERITEM {
-      int id_order FK
-      int id_product FK
+      Long id_order FK
+      Long id_product FK
       int quantity
       float unit_price
       PK(id_order, id_product)

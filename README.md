@@ -30,6 +30,11 @@ API de e-commerce desenvolvida em **Java 17**, utilizando **Spring Boot**, **Gra
       string password
   }
 
+   class ROLE {
+       Long id_role PK
+       string authority
+     }
+
   class PRODUCT {
       Long id_product PK
       string name
@@ -58,7 +63,8 @@ API de e-commerce desenvolvida em **Java 17**, utilizando **Spring Boot**, **Gra
       float unit_price
       PK(id_order, id_product)
   }
-
+  
+  USER "0..n" -- "0..n" ROLE  
   USER "1" -- "0..n" PRODUCT
   USER "1" -- "0..n" CARTITEM 
   PRODUCT "1" -- "0..n" CARTITEM 

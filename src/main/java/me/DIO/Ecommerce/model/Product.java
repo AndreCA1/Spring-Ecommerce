@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import me.DIO.Ecommerce.dtos.ProductDTO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class Product {
 
     private String name;
     private String description;
-    private Double price;
+    private float price;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

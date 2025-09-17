@@ -20,5 +20,5 @@ public class CarItem {
     @EqualsAndHashCode.Include
     private CarItemPK id = new CarItemPK();
 
-    private Long quantity;
+    private int quantity;
 }
